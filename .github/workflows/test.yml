@@ -1,4 +1,4 @@
-name: Contact Form Tests
+name: Tests & Lint
 
 on:
   push:
@@ -7,8 +7,32 @@ on:
     branches: [main]
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Lint PHP
+        run: php -l contact.php
+
+      - name: Validate HTML
+        run: |
+          # Check for common HTML issues
+          if grep -q '</html>' index.html && grep -q '<html' index.html; then
+            echo "✅ HTML structure valid"
+          else
+            echo "❌ HTML structure invalid"
+            exit 1
+          fi
+
   test:
     runs-on: ubuntu-latest
+    needs: lint
 
     steps:
       - uses: actions/checkout@v4
