@@ -1,5 +1,7 @@
 # ManyCents Resources Website
 
+![Tests](https://github.com/lateganluhein/hosting/actions/workflows/test.yml/badge.svg)
+
 Corporate marketing website for ManyCents Resources - a coal mining and trading company.
 
 **Live:** https://www.manycents.co.za
