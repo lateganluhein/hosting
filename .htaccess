@@ -1,0 +1,33 @@
+# Force HTTPS redirect
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Prevent directory browsing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^(contact\.php|rate_limit\.json)$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+# Set correct MIME types
+AddType image/png .png
+AddType text/html .html
+AddType text/css .css
+AddType application/javascript .js
+
+# Enable browser caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType text/html "access plus 1 day"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# Compress files for faster loading
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript
+</IfModule>

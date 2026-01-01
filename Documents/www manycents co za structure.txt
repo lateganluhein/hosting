@@ -1,0 +1,37 @@
+## 📂 Final Directory Structure:
+
+```
+/public_html/  (or your website root directory)
+│
+├── .htaccess                    (Forces HTTPS, caching, security)
+├── index.html                   (Main website - enhanced version)
+├── contact.php                  (Email handler with SMTP)
+├── rate_limit.json              (Spam prevention data)
+├── favicon.png                  (Browser tab icon - your M logo)
+├── logo.png                     (Main ManyCents logo)
+├── mining-image.png             (Left side image)
+└── processing-image.png         (Right side image)
+```
+
+## 📊 File Count: **8 files total**
+
+## 🔍 File Purposes:
+
+| File | Purpose | Size |
+|------|---------|------|
+| `.htaccess` | Security & HTTPS redirect | Small |
+| `index.html` | Your main website | ~25KB |
+| `contact.php` | Processes contact form | ~10KB |
+| `rate_limit.json` | Tracks form submissions | Grows over time |
+| `favicon.png` | Tab icon | Small |
+| `logo.png` | Main company logo | Medium |
+| `mining-image.png` | Side decoration | Medium |
+| `processing-image.png` | Side decoration | Medium |
+
+## ✅ All Files Uploaded & Working!
+
+**Website URL:** https://www.manycents.co.za
+
+---
+
+That's your complete, secure, professional website! Simple, clean, and everything in one directory just like you wanted. 🎉

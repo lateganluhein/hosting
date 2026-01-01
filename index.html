@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ManyCents Resources - Specialist coal trading company supplying premium anthracite and lean coal to international markets. Magomba Coal Mine in Eswatini.">
+    <meta name="keywords" content="anthracite coal, lean coal, coal trading, coal export, Magomba coal mine, Eswatini coal, ManyCents Resources">
+    <meta name="author" content="ManyCents Resources (Pty) Ltd">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.manycents.co.za/">
+    <meta property="og:title" content="ManyCents Resources - Coal Trading & Mining">
+    <meta property="og:description" content="Specialist coal trading company supplying premium anthracite and lean coal to international markets.">
+    <meta property="og:image" content="https://www.manycents.co.za/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <title>ManyCents Resources - Coal Trading & Mining</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVJM7R4RHF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FVJM7R4RHF');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .top-nav {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-nav nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-section {
+            background: #0a0a0a;
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 100%;
+        }
+
+        .logo-section img.side-image {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .logo-section img.main-logo {
+            max-width: 400px;
+            width: 90%;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: #ffa500;
+            outline: 2px solid #ffa500;
+            outline-offset: 2px;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23333" width="1200" height="600"/><path fill="%23444" d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem 8rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ffa500;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            background: #ff8c00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            outline: none;
+            border-color: white;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #ffa500;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .about {
+            background: #f9f9f9;
+        }
+
+        .project-highlight {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+
+        .project-highlight h3 {
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .stat-box h4 {
+            font-size: 2.5rem;
+            color: #ffa500;
+            margin-bottom: 0.5rem;
+        }
+
+        .advantages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .advantage-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .advantage-item h4 {
+            color: #ffa500;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        label .required {
+            color: #d32f2f;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #ffa500;
+        }
+
+        input.error, textarea.error {
+            border-color: #d32f2f;
+        }
+
+        .error-message {
+            color: #d32f2f;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .hp-field {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+        }
+
+        button[type="submit"] {
+            background: #ffa500;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover,
+        button[type="submit"]:focus {
+            background: #ff8c00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            outline: 2px solid #ff8c00;
+            outline-offset: 2px;
+        }
+
+        button[type="submit"]:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .form-message {
+            max-width: 600px;
+            margin: 0 auto 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            display: none;
+            text-align: center;
+        }
+
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .logo-section {
+                flex-direction: column;
+            }
+            
+            .logo-section img.side-image {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .stat-box h4 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            nav ul {
+                gap: 0.5rem;
+            }
+
+            nav a {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <nav role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="logo-section">
+        <img src="mining-image.png" alt="Coal Mining Operations at Magomba" class="side-image">
+        <img src="logo.png" alt="ManyCents Resources - Creator of Wealth" class="main-logo">
+        <img src="processing-image.png" alt="Coal Processing Facility" class="side-image">
+    </div>
+
+    <section id="home" class="hero">
+        <h1>Coal Mining, Processing & Export</h1>
+        <p>Specialist coal trading company supplying lean coal and anthracite to international markets</p>
+        <a href="#contact" class="cta-button">Request Information</a>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+            ManyCents Resources specializes in the supply of premium quality coal products for industrial and energy applications worldwide.
+        </p>
+        <div class="products">
+            <div class="product-card">
+                <h3>Anthracite Coal</h3>
+                <p>Premium high-rank anthracite with low ash content (&lt;15%), ideal for industrial base load and specialized applications. Available in sized and unsized products.</p>
+                <p style="margin-top: 1rem;"><strong>Applications:</strong> Industrial heating, metallurgy, filtration</p>
+            </div>
+            <div class="product-card">
+                <h3>Lean Coal</h3>
+                <p>Quality lean coal products meeting international specifications for various industrial and energy generation applications.</p>
+                <p style="margin-top: 1rem;"><strong>Applications:</strong> Power generation, cement production, industrial processes</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="about">
+        <h2>Major Projects</h2>
+        
+        <div class="project-highlight">
+            <h3>Magomba Anthracite Coal Mine</h3>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                Located in Eswatini, the Magomba Coal Project commenced operations in February 2025. This flagship project is positioned 
+                as a strategic, reliable supplier of premium anthracite to the European market. Built on a robust geological foundation 
+                with approximately 12.8 million tonnes of measured resources, Magomba exemplifies our commitment to quality and reliability.
+            </p>
+            
+            <div class="stats">
+                <div class="stat-box">
+                    <h4>12.8M</h4>
+                    <p>Tonnes Measured Resource</p>
+                </div>
+                <div class="stat-box">
+                    <h4>35,000</h4>
+                    <p>Tonnes/Month Production</p>
+                </div>
+                <div class="stat-box">
+                    <h4>10+</h4>
+                    <p>Years Mine Life</p>
+                </div>
+                <div class="stat-box">
+                    <h4>~120km</h4>
+                    <p>Distance to Maputo Port</p>
+                </div>
+            </div>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">Magomba Product Streams</h4>
+            <div class="advantages">
+                <div class="advantage-item">
+                    <h4>Stream A: Industrial Base Load (65%)</h4>
+                    <p>0-50mm Unsized and Duff. Washed coal crushed to maximize yield for high-volume industrial applications.</p>
+                </div>
+                <div class="advantage-item">
+                    <h4>Stream B: Premium Products (35%)</h4>
+                    <p>Sized products including Nuts (20-50mm) and Peas (10-20mm) for premium market segments.</p>
+                </div>
+            </div>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">Key Advantages</h4>
+            <div class="advantages">
+                <div class="advantage-item">
+                    <h4>Flexible Processing</h4>
+                    <p>Campaign washing with Dense Medium Cyclone plant allows us to wash ROM coal to exact customer specifications.</p>
+                </div>
+                <div class="advantage-item">
+                    <h4>Maputo Corridor Access</h4>
+                    <p>Optimal positioning near Mpaka rail siding with only ~120km to Maputo port, providing significant competitive advantage.</p>
+                </div>
+                <div class="advantage-item">
+                    <h4>Dual Port Strategy</h4>
+                    <p>Matola Coal Terminal for high-volume fines and Maputo Dry Bulk quays for sized anthracite to minimize breakage.</p>
+                </div>
+                <div class="advantage-item">
+                    <h4>Market Responsive</h4>
+                    <p>Ability to immediately adjust product mix and operating parameters to maximize efficiency and meet market demands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <h3>ManyCents Resources (Pty) Ltd</h3>
+            <p><strong>Address:</strong> 18 Bubesi House, Wellington Office Park, Durbanville, 7550, South Africa</p>
+            <p><strong>Postal:</strong> P O Box 3845, Tyger Valley, 7536</p>
+            <p><strong>Phone:</strong> <a href="tel:+27609592405" style="color: #ffa500; text-decoration: none;">+27 60 959 2405</a></p>
+            <p><strong>Email:</strong> <a href="mailto:office@manycents.co.za" style="color: #ffa500; text-decoration: none;">office@manycents.co.za</a></p>
+            <p style="margin-top: 1rem;"><strong>CEO:</strong> Luhein Lategan</p>
+        </div>
+        <p style="text-align: center; margin-bottom: 2rem;">Interested in learning more about our coal products and supply capabilities? Get in touch with our team.</p>
+        
+        <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
+        
+        <form class="contact-form" id="contactForm" action="contact.php" method="POST" novalidate>
+            <!-- Honeypot field to catch bots -->
+            <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off">
+            
+            <div class="form-group">
+                <label for="name">Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
+                <span class="error-message" id="name-error">Please enter your name</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="company">Company <span class="required">*</span></label>
+                <input type="text" id="company" name="company" required aria-required="true" autocomplete="organization">
+                <span class="error-message" id="company-error">Please enter your company name</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+                <span class="error-message" id="email-error">Please enter a valid email address</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="product">Product Interest</label>
+                <input type="text" id="product" name="product" placeholder="e.g., Anthracite, Lean Coal" autocomplete="off">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea id="message" name="message" placeholder="Tell us about your requirements..." required aria-required="true"></textarea>
+                <span class="error-message" id="message-error">Please enter your message</span>
+            </div>
+            
+            <button type="submit" id="submitBtn">Send Inquiry</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ManyCents Resources (Pty) Ltd</p>
+        <p style="margin-top: 0.5rem;">Specialist coal trading, mining, processing and export</p>
+    </footer>
+
+    <script>
+        // Form validation and submission handling
+        (function() {
+            'use strict';
+            
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const messageDiv = document.getElementById('form-message');
+            
+            // Validate email format
+            function isValidEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+            
+            // Show error message for a field
+            function showError(fieldId, message) {
+                const field = document.getElementById(fieldId);
+                const errorSpan = document.getElementById(fieldId + '-error');
+                field.classList.add('error');
+                if (errorSpan) {
+                    errorSpan.textContent = message || errorSpan.textContent;
+                    errorSpan.style.display = 'block';
+                }
+            }
+            
+            // Clear error message for a field
+            function clearError(fieldId) {
+                const field = document.getElementById(fieldId);
+                const errorSpan = document.getElementById(fieldId + '-error');
+                field.classList.remove('error');
+                if (errorSpan) {
+                    errorSpan.style.display = 'none';
+                }
+            }
+            
+            // Validate individual field
+            function validateField(field) {
+                const value = field.value.trim();
+                const fieldId = field.id;
+                
+                if (field.hasAttribute('required') && !value) {
+                    showError(fieldId, 'This field is required');
+                    return false;
+                }
+                
+                if (fieldId === 'email' && value) {
+                    if (!isValidEmail(value)) {
+                        showError(fieldId, 'Please enter a valid email address');
+                        return false;
+                    }
+                }
+                
+                clearError(fieldId);
+                return true;
+            }
+            
+            // Real-time validation on blur
+            const fields = ['name', 'company', 'email', 'message'];
+            fields.forEach(function(fieldId) {
+                const field = document.getElementById(fieldId);
+                if (field) {
+                    field.addEventListener('blur', function() {
+                        validateField(this);
+                    });
+                    
+                    field.addEventListener('input', function() {
+                        if (this.classList.contains('error')) {
+                            validateField(this);
+                        }
+                    });
+                }
+            });
+            
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Clear previous messages
+                messageDiv.className = 'form-message';
+                messageDiv.style.display = 'none';
+                
+                // Check honeypot
+                if (form.website && form.website.value) {
+                    // Bot detected, silently fail
+                    return false;
+                }
+                
+                // Validate all fields
+                let isValid = true;
+                fields.forEach(function(fieldId) {
+                    const field = document.getElementById(fieldId);
+                    if (field && !validateField(field)) {
+                        isValid = false;
+                    }
+                });
+                
+                if (!isValid) {
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = 'Please fix the errors above and try again.';
+                    messageDiv.style.display = 'block';
+                    messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    return false;
+                }
+                
+                // Disable submit button to prevent double submission
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+                
+                // Submit the form
+                form.submit();
+            });
+            
+            // Check for URL parameters on page load
+            window.addEventListener('DOMContentLoaded', function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                
+                if (urlParams.has('success')) {
+                    messageDiv.className = 'form-message success';
+                    messageDiv.textContent = 'Thank you for your inquiry! We will contact you shortly at your provided contact details.';
+                    messageDiv.style.display = 'block';
+                    messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Clear the form
+                    form.reset();
+                    
+                } else if (urlParams.has('error')) {
+                    const error = urlParams.get('error');
+                    let errorMessage = 'There was an error sending your message. Please try again.';
+                    
+                    if (error === 'missing') {
+                        errorMessage = 'Please fill in all required fields.';
+                    } else if (error === 'invalid_email') {
+                        errorMessage = 'Please enter a valid email address.';
+                    } else if (error === 'spam') {
+                        errorMessage = 'Your submission was flagged as spam. Please try again.';
+                    } else if (error === 'send_failed') {
+                        errorMessage = 'Failed to send email. Please contact us directly at office@manycents.co.za';
+                    }
+                    
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = errorMessage;
+                    messageDiv.style.display = 'block';
+                    messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                
+                // Clean up URL
+                if (urlParams.has('success') || urlParams.has('error')) {
+                    const cleanUrl = window.location.pathname;
+                    window.history.replaceState({}, document.title, cleanUrl);
+                }
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const navHeight = document.querySelector('.top-nav').offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

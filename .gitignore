@@ -1,0 +1,13 @@
+# State files
+rate_limit.json
+form_submissions.txt
+
+# Backups
+*.backup
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Sandbox
+Sandbox/
