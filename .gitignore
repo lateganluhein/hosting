@@ -1,3 +1,6 @@
+# Credentials - NEVER COMMIT
+credentials.php
+
 # State files
 rate_limit.json
 form_submissions.txt

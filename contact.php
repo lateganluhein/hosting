@@ -14,11 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
     exit;
 }
 
+// Load SMTP credentials from separate file (not in git)
+require_once(__DIR__ . '/credentials.php');
+
 // Email Configuration
-define('SMTP_HOST', 'mail.manycents.co.za');
-define('SMTP_PORT', 465);
-define('SMTP_USERNAME', 'office@manycents.co.za');
-define('SMTP_PASSWORD', 'Manycents2025!');
 define('FROM_EMAIL', 'office@manycents.co.za');
 define('FROM_NAME', 'ManyCents Resources');
 define('TO_EMAIL', 'luhein.lategan@manycents.co.za');
