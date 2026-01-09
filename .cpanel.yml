@@ -1,11 +1,10 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/manycez2q2t3/public_html
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp contact.php $DEPLOYPATH
-    - /bin/cp .htaccess $DEPLOYPATH
-    - /bin/cp favicon.png $DEPLOYPATH
-    - /bin/cp logo.png $DEPLOYPATH
-    - /bin/cp mining-image.png $DEPLOYPATH
-    - /bin/cp processing-image.png $DEPLOYPATH
+    - /bin/cp index.html /home/manycez2q2t3/public_html/
+    - /bin/cp contact.php /home/manycez2q2t3/public_html/
+    - /bin/cp .htaccess /home/manycez2q2t3/public_html/
+    - /bin/cp favicon.png /home/manycez2q2t3/public_html/
+    - /bin/cp logo.png /home/manycez2q2t3/public_html/
+    - /bin/cp mining-image.png /home/manycez2q2t3/public_html/
+    - /bin/cp processing-image.png /home/manycez2q2t3/public_html/
